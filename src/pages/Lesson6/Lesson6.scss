@@ -1,0 +1,16 @@
+.square-animated-6 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+  
+.square-animated-6:hover {
+    animation-name: change-background;
+    animation-duration: 5s;
+}
+  
+@keyframes change-background {
+    0% {  background-color: blue; }
+    50% {  background-color: orange; }
+    100% {  background-color: lightblue; }
+}

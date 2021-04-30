@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans Condensed';
+    padding: 20px 40px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.particles {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #cde9ed;
+}
+
+.heading {
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+}
+
+/* ----------- Media queries ----------- */
+/* 640px */
+@media only screen and (max-width: 40em) {
+    .heading {
+        margin-top: 15rem;
+    }
+}

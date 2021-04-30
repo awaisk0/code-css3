@@ -1,0 +1,42 @@
+.square-transforms {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+}
+
+.btn-submit-challenge {
+    margin-left: 80%;
+}
+
+.btn-next {
+    margin-left: 20px;
+}
+
+/* ----------- Media queries ----------- */
+// 640px
+@media only screen and (max-width: 640px) {
+    .page {
+        margin-top: 14em;
+    }
+
+    .btn-submit-challenge {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .btn-next {
+        margin: 0;
+    } 
+}
+
+// 1300px
+@media only screen and (max-width: 1300px) {
+    .btn-submit-challenge {
+        margin: 10px 0;
+        display: block;
+    }
+
+    .btn-next {
+        margin: 0;
+    } 
+}

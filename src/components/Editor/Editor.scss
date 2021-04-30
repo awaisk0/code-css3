@@ -1,0 +1,59 @@
+.CodeMirror-scroll {
+    position: absolute;
+    overflow: hidden !important;
+}
+
+.btn-expand-collapse {
+    color: orange;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.pane {
+    display: flex;
+    width: 95%;
+    height: 40vh;
+    border: 2px solid rgb(45, 43, 134);
+    background: rgb(219, 219, 219);
+}
+
+// Editor
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* fill the entire space */
+    flex-basis: 0; /* all the same size */
+    padding: 0.5rem;
+}
+
+// Collapsed editor
+.editor-container.collapsed {
+    flex-grow: 0;
+}
+
+.editor-title {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(225, 60%, 60%);
+    color: white;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-top-left-radius: 0.5rem; /* rounded top left corner */
+    border-top-right-radius: 0.5rem; /* rounded top right corner */
+}
+
+.code-mirror-wrapper {
+    flex-grow: 1;
+    border-bottom-left-radius: 0.5rem; /* rounded bottom left corner */
+    border-bottom-right-radius: 0.5rem; /* rounded bottom right corner */
+    overflow: hidden;
+}
+
+/* ----------- Media queries ----------- */
+// 640px
+@media only screen and (max-width: 40em) {
+    .pane {
+        width: 80vw;
+    }
+}

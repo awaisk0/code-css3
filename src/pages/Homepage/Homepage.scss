@@ -1,0 +1,29 @@
+.illustration-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -20px;
+    left: 158%;
+    transform: translateX(-50%);
+}
+
+.homepage-container {
+    border-width: 0.8vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.desc {
+    font-size: 40px;
+}
+
+/* ----------- Media queries ----------- */
+// 640px
+@media only screen and (max-width: 40em) {
+    .illustration-container {
+        visibility: hidden;
+    }
+}
+  

@@ -1,0 +1,75 @@
+.nav-signin-signup {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signin-signup-link {
+  color: black;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.signin-signup-link:hover {
+  opacity: 0.7;
+}
+
+.header {
+  background-color: #cde9ed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-weight: bold;
+
+  .logo-container {
+    width: 70px;
+    padding: 18px;
+    margin-left: 3rem;
+  }
+
+  .options {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      cursor: pointer;
+      padding: 10px 15px;
+      margin-right: 3rem;
+    }
+
+    .option:hover {
+      color: rgb(26, 26, 238);
+    }
+  }
+}
+
+.active-link {
+  border-top: 5px solid blue;
+}
+
+
+/* ----------- Media queries ----------- */
+// 640px
+@media only screen and (max-width: 40em) {
+  .header {
+    display: block;
+
+    .options {
+      display: block;
+      margin-top: 2em;
+      width: 100%;
+
+      .option {
+        display: block;
+        background-color: rgba(0, 77, 128, 0.438);
+      
+      }
+    }
+  }
+}

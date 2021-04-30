@@ -1,0 +1,15 @@
+.square-transitions {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+
+    // applying styles for transitions
+    transition-duration: 750ms;
+    transition-property: background-color, transform;
+    transition-timing-function: ease-in;
+}
+
+.square-transitions:hover {
+    background-color: lightblue;
+    transform: rotate(20deg);
+}

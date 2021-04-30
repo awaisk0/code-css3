@@ -1,0 +1,25 @@
+.astronaut-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.astronaut-illustration {
+    width: 350px;
+    height: 350px;
+}
+
+.not-found-page-main-text {
+    text-align: center;
+}
+
+.not-found-page-link-text {
+    text-align: center;
+}
+
+// 640px
+@media only screen and (max-width: 40em) {
+    .not-found-page-container {
+        margin-top: 14em;
+    }
+}

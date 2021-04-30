@@ -1,0 +1,53 @@
+// /////////////////////////////////////////
+// linear timing-function
+.square-transitions2 {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+
+    // applying styles for transitions
+    transition-duration: 750ms;
+    transition-property: background-color, transform;
+    transition-timing-function: linear;
+    transition-delay: 1.5s;}
+
+.square-transitions2:hover {
+    background-color: lightblue;
+    transform: rotate(20deg);
+}
+
+// ////////////////////////////////////////
+// ease-out timing-function
+.square-transitions3 {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+
+    // applying styles for transitions
+    transition-duration: 750ms;
+    transition-property: background-color, transform;
+    transition-timing-function: ease-out;
+    transition-delay: 1.5s;}
+
+.square-transitions3:hover {
+    background-color: lightblue;
+    transform: rotate(20deg);
+}
+
+// /////////////////////////////////////////////
+// ease-in-out timing-function
+.square-transitions4 {
+    width: 60px;
+    height: 60px;
+    background-color: blue;
+
+    // applying styles for transitions
+    transition-duration: 750ms;
+    transition-property: background-color, transform;
+    transition-timing-function: ease-in-out;
+}
+
+.square-transitions4:hover {
+    background-color: lightblue;
+    transform: rotate(20deg);
+}
