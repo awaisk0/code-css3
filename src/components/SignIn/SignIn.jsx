@@ -15,35 +15,42 @@ class SignIn extends Component {
   }
 
   onEmailChange = (event) => {
-    this.setState({ signInEmail: event.target.value });
+    this.setState({signInEmail: event.target.value});
   };
 
   onPasswordChange = (event) => {
-    this.setState({ signInPassword: event.target.value });
+    this.setState({signInPassword: event.target.value});
   };
   
   onSubmitSignIn = () => {
-    fetch("https://code-css3-api.herokuapp.com/signin", {
-      method: "post",
+
+    const { signInEmail, signInPassword } = this.state;
+    const { loadUser, onRouteChange } = this.props;
+
+    fetch('https://code-css3-api.herokuapp.com/signin', {
+      method: 'post',
       headers: { 
-        "Content-Type": "application/json" 
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: this.state.signInEmail,
-        password: this.state.signInPassword,
+        email: signInEmail,
+        password: signInPassword,
       }),
     })
       .then(response => response.json())
       .then(user => {
         if (user.id) {
-          this.props.loadUser(user);
-          this.props.onRouteChange("home");
+          loadUser(user);
+          onRouteChange('home');
         }
       });
   };
 
   render() {
+
+    const { signInEmail, signInPassword } = this.state;
     const { onRouteChange } = this.props;
+
     return (
       <>
         <article className='sign-in'>
@@ -54,7 +61,7 @@ class SignIn extends Component {
             <FormInput
               name='email'
               type='email'
-              value={this.state.signInEmail}
+              value={signInEmail}
               handleChange={this.onEmailChange}
               label='Email'
               required
@@ -62,7 +69,7 @@ class SignIn extends Component {
             <FormInput
               name='password'
               type='password'
-              value={this.state.signInPassword}
+              value={signInPassword}
               handleChange={this.onPasswordChange}
               label='Password'
               required

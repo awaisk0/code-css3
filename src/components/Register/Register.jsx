@@ -5,9 +5,7 @@ import FormInput from '../FormInput/FormInput';
 import './Register.scss';
 
 class Register extends React.Component {
-
   constructor(props) {
-
     super(props);
     
     this.state = {
@@ -15,41 +13,46 @@ class Register extends React.Component {
       password: '',
       name: ''
     }
-
   }
 
   onNameChange = (event) => {
-    this.setState({name: event.target.value})
+    this.setState({name: event.target.value});
   }
 
   onEmailChange = (event) => {
-    this.setState({email: event.target.value})
+    this.setState({email: event.target.value});
   }
 
   onPasswordChange = (event) => {
-    this.setState({password: event.target.value})
+    this.setState({password: event.target.value});
   }
 
   onSubmitSignUp = () => {
+
+    const { email, password, name } = this.state;
+    const { loadUser, onRouteChange } = this.props;
+
     fetch('https://code-css3-api.herokuapp.com/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
-        email: this.state.email,
-        password: this.state.password,
-        name: this.state.name
+        email: email,
+        password: password,
+        name: name
       })
     })
       .then(response => response.json())
       .then(user => {
         if (user.id) {
-          this.props.loadUser(user);
-          this.props.onRouteChange('home');
+          loadUser(user);
+          onRouteChange('home');
         }
       })
   }
 
   render() {
+    const { email, password, name } = this.state;
+
     return (
       <article className='sign-up'>
         <h2 className='title'>Sign Up</h2>
@@ -58,7 +61,7 @@ class Register extends React.Component {
           <FormInput
             type='text'
             name='name'
-            value={this.state.name}
+            value={name}
             handleChange={this.onNameChange}
             label='Name'
             required
@@ -66,7 +69,7 @@ class Register extends React.Component {
           <FormInput
             type='email'
             name='email'
-            value={this.state.email}
+            value={email}
             handleChange={this.onEmailChange}
             label='Email'
             required
@@ -74,7 +77,7 @@ class Register extends React.Component {
           <FormInput
             type='password'
             name='password'
-            value={this.state.password}
+            value={password}
             handleChange={this.onPasswordChange}
             label='Password'
             required
